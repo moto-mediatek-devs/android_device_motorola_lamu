@@ -11,5 +11,8 @@ BOARD_SUPER_PARTITION_SIZE := 8589934592
 # Inherit from common tree
 include device/motorola/mt6768-common/BoardConfigCommon.mk
 
+# Display
+TARGET_SCREEN_DENSITY := 400
+
 # Inherit the proprietary files
 include vendor/motorola/lamu/BoardConfigVendor.mk
