@@ -5,6 +5,9 @@
 
 DEVICE_PATH := device/motorola/lamu
 
+# Partitions
+BOARD_SUPER_PARTITION_SIZE := 8589934592
+
 # Inherit from common tree
 include device/motorola/mt6768-common/BoardConfigCommon.mk
 
