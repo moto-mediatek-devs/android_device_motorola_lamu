@@ -14,5 +14,8 @@ include device/motorola/mt6768-common/BoardConfigCommon.mk
 # Display
 TARGET_SCREEN_DENSITY := 400
 
+# Recovery
+TARGET_RECOVERY_DENSITY := xhdpi
+
 # Inherit the proprietary files
 include vendor/motorola/lamu/BoardConfigVendor.mk
