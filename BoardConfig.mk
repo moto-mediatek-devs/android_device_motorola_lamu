@@ -39,6 +39,7 @@ BOARD_VENDOR_KERNEL_MODULES += \
 
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # Recovery
 TARGET_RECOVERY_DENSITY := xhdpi
