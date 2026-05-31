@@ -155,6 +155,9 @@ vendor/etc/aurisys_config_aw.xml
 vendor/etc/aurisys_config_fsm.xml
 vendor/etc/aurisys_config_rv.xml
 
+# SKUs
+system/etc/init/odm.init.rc:odm/etc/init/odm.init.rc
+
 # TEE
 vendor/etc/init/trustonic.rc
 

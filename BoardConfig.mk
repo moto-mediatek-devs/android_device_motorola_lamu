@@ -37,6 +37,9 @@ BOARD_VENDOR_KERNEL_MODULES += \
     $(KERNEL_PATH)/modules/wmt_chrdev_wifi.ko \
     $(KERNEL_PATH)/modules/wmt_drv.ko
 
+# Properties
+TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
+
 # Recovery
 TARGET_RECOVERY_DENSITY := xhdpi
 

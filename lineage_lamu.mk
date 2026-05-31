@@ -22,5 +22,7 @@ PRODUCT_MODEL := moto g15
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
+    BuildDesc="lamu_g-user 15 VVTA35.51-137 7eabca release-keys" \
+    BuildFingerprint=motorola/lamu_ge/lamu:15/VVTA35.51-137/7eabca:user/release-keys \
     DeviceProduct=lamu \
     SystemName=lamu_g
