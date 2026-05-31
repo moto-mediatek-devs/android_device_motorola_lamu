@@ -9,6 +9,7 @@ TARGET_SCREEN_HEIGHT := 2400
 
 # Overlays
 PRODUCT_PACKAGES += \
+    ApertureOverlayLamu \
     FrameworkOverlayLamu \
     FrameworkOverlayLamuLite \
     SystemUIOverlayLamu
