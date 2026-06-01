@@ -10,7 +10,8 @@ TARGET_SCREEN_HEIGHT := 2400
 # Overlays
 PRODUCT_PACKAGES += \
     FrameworkOverlayLamu \
-    FrameworkOverlayLamuLite
+    FrameworkOverlayLamuLite \
+    SystemUIOverlayLamu
 
 # Shipping API Level
 BOARD_SHIPPING_API_LEVEL := 202404
