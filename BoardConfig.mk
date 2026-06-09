@@ -16,26 +16,30 @@ include device/motorola/mt6768-common/BoardConfigCommon.mk
 TARGET_SCREEN_DENSITY := 400
 
 # Kernel
-BOARD_SYSTEM_KERNEL_MODULES_LOAD := $(strip $(shell cat $(KERNEL_PATH)/system_dlkm.modules.load))
-BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(KERNEL_PATH)/vendor_dlkm.modules.load))
-BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(KERNEL_PATH)/vendor_ramdisk.modules.load))
-BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(KERNEL_PATH)/vendor_ramdisk.modules.load.recovery))
+TARGET_KERNEL_DEVICE := mgk_64_k66
+TARGET_KERNEL_DIR := $(KERNEL_PATH)/6.6
+TARGET_KERNEL_PLATFORM_SOURCE := motorola_lamu
 
-TARGET_PREBUILT_KERNEL := $(KERNEL_PATH)/$(BOARD_KERNEL_IMAGE_NAME)
-TARGET_BOARD_KERNEL_HEADERS := $(KERNEL_PATH)/kernel-headers
-BOARD_PREBUILT_DTBIMAGE_DIR := $(KERNEL_PATH)/dtb
+BOARD_SYSTEM_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/system_dlkm.modules.load))
+BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/vendor_dlkm.modules.load))
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/vendor_ramdisk.modules.load))
+BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/vendor_ramdisk.modules.load.recovery))
+
+BOARD_KERNEL_MODULE_DIR := $(TARGET_KERNEL_DIR)
+BOARD_PREBUILT_DTBIMAGE_DIR := $(TARGET_KERNEL_DIR)
+TARGET_PREBUILT_KERNEL := $(TARGET_KERNEL_DIR)/$(BOARD_KERNEL_IMAGE_NAME)
+TARGET_PREBUILT_KERNEL_HEADERS := $(TARGET_KERNEL_DIR)/kernel-uapi-headers.tar.gz
 
 ALL_VENDOR_RAMDISK_MODULES := $(sort $(BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD) $(BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD))
-BOARD_KERNEL_MODULE_DIR := $(KERNEL_PATH)/modules
 BOARD_SYSTEM_KERNEL_MODULES := $(addprefix $(BOARD_KERNEL_MODULE_DIR)/,$(BOARD_SYSTEM_KERNEL_MODULES_LOAD))
 BOARD_VENDOR_KERNEL_MODULES := $(addprefix $(BOARD_KERNEL_MODULE_DIR)/,$(BOARD_VENDOR_KERNEL_MODULES_LOAD))
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(addprefix $(BOARD_KERNEL_MODULE_DIR)/,$(ALL_VENDOR_RAMDISK_MODULES))
 
 BOARD_VENDOR_KERNEL_MODULES += \
-    $(KERNEL_PATH)/modules/gps_drv_stp.ko \
-    $(KERNEL_PATH)/modules/wlan_drv_gen4m_6768.ko \
-    $(KERNEL_PATH)/modules/wmt_chrdev_wifi.ko \
-    $(KERNEL_PATH)/modules/wmt_drv.ko
+    $(BOARD_KERNEL_MODULE_DIR)/gps_drv_stp.ko \
+    $(BOARD_KERNEL_MODULE_DIR)/wlan_drv_gen4m_6768.ko \
+    $(BOARD_KERNEL_MODULE_DIR)/wmt_chrdev_wifi.ko \
+    $(BOARD_KERNEL_MODULE_DIR)/wmt_drv.ko
 
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
