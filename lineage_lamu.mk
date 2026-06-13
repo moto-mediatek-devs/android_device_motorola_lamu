@@ -20,3 +20,7 @@ PRODUCT_BRAND := motorola
 PRODUCT_MODEL := moto g15
 
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    DeviceProduct=lamu \
+    SystemName=lamu_g
