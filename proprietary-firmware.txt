@@ -1,0 +1,11 @@
+# Firmware - from motorola/lamu_g/lamu:15/VVTA35.51-137/7eabca:user/release-keys
+
+dtbo.img;AB
+gz.img;AB
+lk.img;AB
+modem.img;AB
+preloader_raw.img;AB
+scp.img;AB
+spmfw.img;AB
+sspm.img;AB
+tee.img;AB
