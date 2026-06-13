@@ -2,9 +2,9 @@
 
 dtbo.img;AB
 gz.img;AB
-lk.img;AB
+lk.img;AB|02e6bc1699d7cddf5475f2e154c1b941836d624d
 modem.img;AB
-preloader_raw.img;AB
+preloader_raw.img;AB|3c09bc9d594e9d1f68d1b22c490d21fd93eb5da9
 scp.img;AB
 spmfw.img;AB
 sspm.img;AB
