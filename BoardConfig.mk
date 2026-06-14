@@ -42,6 +42,7 @@ BOARD_VENDOR_KERNEL_MODULES += \
     $(BOARD_KERNEL_MODULE_DIR)/wmt_drv.ko
 
 # Properties
+TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
 TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 

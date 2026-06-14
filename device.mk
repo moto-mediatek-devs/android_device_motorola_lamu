@@ -20,7 +20,8 @@ PRODUCT_SHIPPING_API_LEVEL := 35
 
 # SKU properties
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/sku/,$(TARGET_COPY_OUT_ODM)/etc/prop)
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/sku/product,$(TARGET_COPY_OUT_PRODUCT)/etc/prop) \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/sku/odm,$(TARGET_COPY_OUT_ODM)/etc/prop)
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \

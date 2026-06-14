@@ -8,7 +8,7 @@
     <overlay
         android:isStatic="true"
         android:priority="200"
-        android:requiredSystemPropertyName="ro.product.vendor.device"
+        android:requiredSystemPropertyName="ro.product.odm.device"
         android:requiredSystemPropertyValue="lamu"
         android:targetPackage="com.android.systemui" />
 </manifest>
