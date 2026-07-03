@@ -393,3 +393,8 @@ vendor/app/mcRegistry/40188311faf343488db888ad39496f9a.tlbin
 vendor/app/mcRegistry/5020170115e016302017012521300000.drbin
 vendor/app/mcRegistry/5020170115e016302017012521300000.tlbin
 vendor/app/mcRegistry/e97c270ea5c44c58bcd3384a2fa2539e.tabin
+
+# Wi-Fi
+vendor/firmware/txpowerctrl.cfg
+vendor/firmware/txpowerctrl16.cfg
+vendor/firmware/txpowerctrllite.cfg
