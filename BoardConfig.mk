@@ -4,7 +4,7 @@
 #
 
 DEVICE_PATH := device/motorola/lamu
-KERNEL_PATH := $(DEVICE_PATH)-kernel
+KERNEL_PATH := $(DEVICE_PATH)-kernels
 
 # DTBO
 BOARD_KERNEL_SEPARATED_DTBO := true
@@ -22,11 +22,12 @@ TARGET_SCREEN_DENSITY := 400
 TARGET_KERNEL_DEVICE := mgk_64_k66
 TARGET_KERNEL_DIR := $(KERNEL_PATH)/6.6
 TARGET_KERNEL_PLATFORM_SOURCE := motorola_lamu
+TARGET_PROVIDES_STATIC_MODULE_LISTS := true
 
-BOARD_SYSTEM_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/system_dlkm.modules.load))
-BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/vendor_dlkm.modules.load))
-BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/vendor_ramdisk.modules.load))
-BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/vendor_ramdisk.modules.load.recovery))
+BOARD_SYSTEM_KERNEL_MODULES_LOAD := $(strip $(shell cat $(TARGET_KERNEL_DIR)/system_dlkm.modules.load))
+BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(TARGET_KERNEL_DIR)/vendor_dlkm.modules.load))
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(TARGET_KERNEL_DIR)/vendor_ramdisk.modules.load))
+BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(TARGET_KERNEL_DIR)/vendor_ramdisk.modules.load.recovery))
 
 BOARD_KERNEL_MODULE_DIR := $(TARGET_KERNEL_DIR)
 BOARD_PREBUILT_DTBIMAGE_DIR := $(TARGET_KERNEL_DIR)
