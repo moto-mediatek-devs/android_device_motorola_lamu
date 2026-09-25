@@ -38,6 +38,8 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('android.hardware.graphics.common-V5-ndk.so', 'android.hardware.graphics.common-V7-ndk.so'),
     'vendor/lib64/libmtkcam_hal_aidl_common.so': blob_fixup()
         .replace_needed('android.hardware.camera.common-V2-ndk.so', 'android.hardware.camera.common-V1-ndk.so'),
+    'vendor/lib64/libcam.hal3a.v3.so': blob_fixup()
+        .sig_replace('40 01 89 9a 89 94 03 94 e0 6b 04 f9', '40 01 89 9a e0 03 1f aa e0 6b 04 f9'),
     'vendor/lib64/libcam.utils.sensorprovider.so': blob_fixup()
         .replace_needed('android.hardware.sensors-V2-ndk.so', 'android.hardware.sensors-V3-ndk.so'),
 }  # fmt: skip

@@ -214,7 +214,7 @@ vendor/lib64/libcam.hal3a.log.so|1a3dc8e4ce944e859a95d4b0a4880b5d0f51bc65
 vendor/lib64/libcam.hal3a.v3.dng.so|8e9be130bf06ef4841382b5975eeb464f13899e7
 vendor/lib64/libcam.hal3a.v3.lsctbl.so|235df6cb1501f2c0472dbd99d17fafe20fff95ba
 vendor/lib64/libcam.hal3a.v3.nvram.so|93b8d36618c3f684b39c14662410e3bf0c7a1b3b
-vendor/lib64/libcam.hal3a.v3.so|a93eb413f38263703aa87de27b4aa88d77266148
+vendor/lib64/libcam.hal3a.v3.so|a93eb413f38263703aa87de27b4aa88d77266148|e7408dff797a8d35c9038ffa077c09d43217e605
 vendor/lib64/libcam.halisp.so|63bf70cf92b864361b44b0d519d4eaf7069da9be
 vendor/lib64/libcam.halsensor.hwintegration.isp4t.so|121613ccf83ab5758277d0fb59329883f5224d85
 vendor/lib64/libcam.halsensor.so|32ed6e27df3b68a921de955d523c03a4fc1a25a6
